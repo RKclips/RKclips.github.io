@@ -1,0 +1,6 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>RK Clips Publisher - Authorization</title>
+<style>body{font-family:system-ui,Arial,sans-serif;max-width:760px;margin:40px auto;padding:0 20px;line-height:1.6}code{display:block;word-break:break-all;background:#f3f3f3;padding:12px;border-radius:8px;font-size:15px}</style></head><body>
+<h1>Authorization</h1><p id="msg">Waiting for the authorization result...</p><code id="code"></code>
+<p>Copy this code and paste it into the RK Clips Publisher window on your computer. The code works once and expires in a few minutes. Nothing is stored on this page.</p>
+<script>const p=new URLSearchParams(location.search);const c=p.get('code'),e=p.get('error');document.getElementById('msg').textContent=c?'Authorization successful. Your code:':(e?'Authorization failed: '+e+' '+(p.get('error_description')||''):'No code received.');document.getElementById('code').textContent=c||'';</script>
+</body></html>
